@@ -99,6 +99,19 @@ variable "private_subnets" {
   }
 }
 
+##Route53 Zone ID
+variable "zone_id" {
+  description = "zone id of domain"
+  type        = string
+  default     = ""
+}
+
+##Route53 Zone Name
+variable "zone_name" {
+  description = "zone name of domain"
+  type        = string
+  default     = ""
+}
 
 ##Route53 Records
 variable "sub_domain_1" {
@@ -111,14 +124,14 @@ variable "sub_domain_1" {
 variable "repository_name" {
   description = "ECR repository name"
   type        = string
-  default     = "ecs_cicd_terraform-image"
+  default     = "ecs_terraform-image"
 }
 
 ##Dockerimage Name
 variable "image_name" {
   description = "Dockerimage name"
   type        = string
-  default     = "takahiros991/ecs_cicd_terraform-image"
+  default     = "takahiros991/ecs_terraform-image"
 }
 
 ##Dockerfile Directory

@@ -13,7 +13,8 @@ variable "private_subnets" {}
 variable "public_subnet_ids" {}
 variable "dmz_subnet_ids" {}
 variable "private_subnet_ids" {}
-#variable "zone_name" {}
+variable "zone_name" {}
+variable "zone_id" {}
 variable "sub_domain_1" {}
 variable "repository_name" {}
 variable "image_name" {}
@@ -24,4 +25,3 @@ provider "aws" {
   alias  = "us-east-1"
   region = var.regions["virginia"]
 }
-variable "github_url" {}
